@@ -1,0 +1,105 @@
+@font-face
+{
+font-family: opificio;
+src: url(Opificio.ttf);
+}
+@font-face
+{
+font-family: helvetica;
+src: url(HelveticaNeue_Lt.ttf);
+}
+.row-fluid .span6
+{
+width:45%;
+}
+img {
+    border: 0 none;
+    height: auto;
+    margin: 6px;
+    max-width: 100%;
+    vertical-align: middle;
+}
+.input{
+height:60px;
+font-family: opificio;
+    font-size: xx-large;
+    font-weight: bold;
+    height: 60px;
+	 background-color: #D1D3D4;
+    border: 2px solid #5A5A5A;
+	color:black;
+}
+body {
+//	background:url("../img/bgimg.jpg") repeat;
+	height:1024;
+	width:1280;
+	overflow:hidden;
+}
+
+.navbar-inner {
+	background: url("../images/headerbg.png") no-repeat;
+	width:1280;
+	height:88px;
+}
+.navbar .brand {
+	font-size: 30px;
+	font-weight: 300;
+	color: #fff;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.space {
+	height: 130px;
+}
+
+#home {
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.span4 {
+	height: 70px;
+}
+.btn-block {
+	height: 100%;
+	font-size: 40px;
+}
+.btn {
+	line-height: 100%;
+}
+.btn-search {
+	line-height: 20px;
+}
+#services .span4 {
+	height: 90px;
+}
+
+.alert-error {
+	height: 100px;
+	font-size: 30px;
+	padding-top: 10px;
+	border: 2px solid #eed3d7;
+	-webkit-border-radius: 6px;
+	    -moz-border-radius: 6px;
+			      border-radius: 6px;
+}
+.error-msg {
+	line-height: 30px;
+}
+
+.alert-success {
+	height: 100px;
+	font-size: 30px;
+	padding-top: 10px;
+	border: 2px solid #d6e9c6;
+	-webkit-border-radius: 6px;
+	    -moz-border-radius: 6px;
+			      border-radius: 6px;
+}
+.info-msg {
+	line-height: 30px;
+}
+.navbar
+{
+    margin-bottom:0px;
+}

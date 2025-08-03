@@ -1,0 +1,10 @@
+/*
+NO rtl styles for this component
+@media (orientation : landscape) {
+  div.ticket-container-rtl{
+    float: right;
+  }
+  div.button-container-rtl{
+    float: right;
+  }
+}*/

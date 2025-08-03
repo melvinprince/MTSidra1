@@ -1,0 +1,121 @@
+.flex-parent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 auto;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.short-and-fixed {
+  white-space: nowrap;
+}
+
+.short-and-fixed > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: lightgreen;
+  display: inline-block;
+}
+
+.long-and-truncated-with-child-corrected {
+  min-width: 0;
+}
+
+.long-and-truncated-with-child-corrected span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.branch-btn {
+  color: var(--list-button-text);
+  margin: 5px auto;
+  border-radius: 75px;
+  height: calc(14vw + 8px) !important;
+  max-height: 48px;
+  max-width: 356px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DEEDF6;
+  background-color: var(--list-button-background);
+  margin: 0 auto 25px auto;
+}
+
+.branch-btn:active {
+  opacity: 0.8;
+}
+
+.btn-text {
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: -webkit-baseline-middle;
+  width: 70%;
+  font-family: Roboto-Medium;
+  
+}
+
+.branch-addr {
+  font-weight: 300 !important;
+}
+
+.branch-btn-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  vertical-align: -webkit-baseline-middle;
+  line-height: 1.3em;
+  display: block;
+  font-weight: 300 !important;
+}
+
+.more-info {
+  line-height: 1em;
+  font-size: 14px;
+}
+
+.align-content {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 66%;
+}
+
+.margin-center {
+  margin: 0 auto;
+}
+
+/* Media Queries */
+
+@media (min-width: 450px) {
+  .btn-text {
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: -webkit-baseline-middle;
+    width: 70%;
+  }
+}
+

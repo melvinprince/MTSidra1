@@ -1,0 +1,19 @@
+{
+  "name": "upgrade-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "jsonfile": "^6.1.0",
+    "lodash": "^4.17.20",
+    "yargs": "^16.2.0"
+  }
+}

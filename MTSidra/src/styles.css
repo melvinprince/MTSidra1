@@ -1,0 +1,302 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  /* These styles are to stop text selection on longpress mobile browsers*/
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  background: var(--app-bg-primary-color);
+}
+
+/* FOR THE DESKTOP, SET THE HOVER STATE */
+body.no-touch .service-btn:hover {
+  /* opacity: 0.9; */
+  /* background-color:#FFFFFF !important; */
+  /* background-color:var(--list_button_hover) !important; */
+  /* border: 2px solid #2389C6;
+  border: 2px solid var(--list-button-background-selected); */
+  /* color: #175A83 !important; */
+  /* color: var(--list-button-text) !important; */
+  /* border-radius: 3px; */
+}
+
+body.no-touch .branch-btn:hover {
+  opacity: 0.9;
+  /* background-color:#FFFFFF !important; */
+  /* background-color:var(--list_button_hover) !important; */
+  /* border: 2px solid #2389C6; */
+  /* border: 2px solid var(--list-button-background-selected); */
+}
+
+.center-text {
+  text-align: center;
+}
+
+.inner-margin-separator {
+  padding-top: 0px;
+  padding-top: 0px;
+  overflow: auto;
+  height: calc(100vh - 17em);
+}
+
+.sub-heading-text-1 {
+  font-size: 28px;
+  color: #000;
+  font-family: Roboto-Bold;
+}
+
+.sub-heading-text-2 {
+  font-size: 18px;
+  color: #000;
+  font-family: Roboto-Medium;
+  width: 75%;
+  font-weight: 400;
+  margin: 5px auto;
+}
+
+div.row {
+  padding: 0 !important;
+  margin: 0 auto !important;
+}
+
+.sub-heading-text-3 {
+  font-size: 19px;
+  color: #FFFFFF;
+  font-family: Roboto-Light;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.common-btn {
+  font-family: Roboto-Light;
+  color: #303030;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.common-btn {
+  /* stroke: #9c003a; */
+}
+
+.accent-btn:hover {
+  opacity: 1;
+}
+
+.accent-btn:active {
+  opacity: 1;
+}
+
+.accent-btn {
+  width: 375px;
+  margin: 0 auto;
+  line-height: 1.25em;
+  padding: 10px 15px;
+  background: rgba(157, 0, 58, 0.58);
+  border-radius: 250px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: Roboto-Regular;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  display: unset;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: none;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: 10px;
+  width: 6px;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+/* Animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Media Queries */
+.loader {
+  max-width: 50px;
+  margin: 0.25em 0.25em 0.25em 0.25em;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: relative;
+  top: 18px;
+}
+
+@media (max-width: 480px) {
+  .col-xxs {
+    display: block;
+    float: none;
+    width: 100%
+  }
+}
+
+/* Small phones */
+@media (max-width: 450px) {
+  .sub-heading-text-1 {
+    font-size: 27px;
+    color: #000;
+  }
+
+  .sub-heading-text-2 {
+    font-size: 17px;
+    color: #000;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .sub-heading-text-3 {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-style: oblique;
+    font-weight: 300;
+  }
+
+  .accent-btn {
+    width: 85%;
+    margin: 0 auto;
+    line-height: 1.25em;
+    /* padding: 15px; */
+    background: rgba(157, 0, 58, 0.58);
+    border-radius: 250px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+/* Center element vertically and horizontally */
+
+.parent-center:before {
+  content: '\200B';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.headerImgDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding:3%;
+}
+.bottomLine{
+  
+  position: fixed;
+  bottom: 0;
+  left: 0px;
+  margin-left: 0px;
+  width: 100vw;
+  height: 10px;
+  background-color: #08867d;
+
+}
+.child-center {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+span.iti__country-name {
+  color: #000;
+}
+
+.custom.text-color {
+  color: rgb(0, 0, 0) !important;
+  color: var(--general-text-color) !important;
+}
+
+.custom.logo-image {
+  content: var(--brand-logo) !important;
+}
+
+.custom.langar {
+  content: var(--lang-imgEn) !important;
+}
+.custom.langen {
+  content: var(--lang-imgAr) !important;
+}
+
+
+.custom.accent-bg-color {
+  background: var(--get-in-line-btn-bg-color);
+  color: var(--get-in-line-btn-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom.group-btn-text-color {
+  color: var(--service-group-text-color) !important;
+  fill: var(--service-group-text-color) !important;
+}
+
+.custom.group-btn-color {
+  background-color: var(--group-button-background) !important;
+}
+
+.custom.link-text-color {
+  color: var(--link-text);
+}
+
+.custom.otp-timer-color {
+  color: var(--leave-button-text-color) !important;
+}
+
+.custom.footer-bg-color {
+  background: var(--footer-background);
+}
+
+.custom.footer-logo {
+  content: var(--footer-logo) !important;
+}
+
+.custom.logo-bg-color {
+  background: var(--brand-logo-background) !important;
+}
+
+:root {
+  --link-text: #0079C2;
+  --eror-text: #cc1800;
+  --footer-background: white;
+  --primary_button_background_dark: #20201F;
+  --primary_button_background_light: #FFFFFF;
+  --primary_button_text_dark: #212021;
+  --primary_button_text_light: #FFFFFF;
+  --list-button-background: var(--primary-bg-color);
+  --list-button-background-selected: var(--secondary-bg-color);
+  --list_button_hover: var(--primary-bg-color);
+  --list_button_oval_background: #FFFFFF;
+  --list-button-text: var(--primary-text-color);
+  --list_button_text_light: var(--secondary-text-color);
+  --leave_button_background: transparent;
+  --secondary_background_light: var(--primary-bg-color);
+  --secondary_background_dark: var(--secondary-bg-color);
+  --secondary_text_dark: var(--primary-text-color);
+  --secondary_text_light: var(--secondary-text-color);
+  --queue-component-background: var(--primary-bg-color);
+}
+
+:focus-visible {
+  outline: -webkit-focus-ring-color auto 4px;
+}
+

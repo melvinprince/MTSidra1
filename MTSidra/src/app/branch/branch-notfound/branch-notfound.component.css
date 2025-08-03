@@ -1,0 +1,7 @@
+/* unvisited link */
+
+#link-to-reload {
+  /* color: white; */
+  text-decoration: underline;
+  cursor: pointer;
+}

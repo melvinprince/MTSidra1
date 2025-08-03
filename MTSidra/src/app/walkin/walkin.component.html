@@ -1,0 +1,60 @@
+<div class="serviceMenu" >
+    
+    <div class="mainCont">
+      <div class="hdImg">
+        <img src="../../assets/img/calender.png" alt="Language Icon" style="width: 25%" />
+      </div>
+      <div class="hdImg">
+        <h2 style="color: #08867d; font-size:1.5em;min-height: 3em;">{{langService['novalidAppointment'][langService['lang']]}}
+        </h2>
+
+      </div>
+
+      <div class="fpProceed ">
+        <div class="card">
+        <h2 style="color: #fff; font-size:1.5em;min-height: 3em;">{{langService['pleasetake'][langService['lang']]}}
+        </h2>
+        <div class="menu-btnen btnwhite" >
+            <div class="menu-txten" (click)="regTicket()" style="width: 100% !important">
+            <p>{{langService['regis'][langService['lang']]}}</p>
+          </div>
+        </div>
+        </div>
+
+              <!-- <div class="card" style="width: 80%; position: relative; top: 50px">
+                <p class="card-text">{{langService['pleasetake'][langService['lang']]}}</p>
+                <div class="sms-btn{{langService['lang']}}" style="
+                      border-radius: 30px;
+                      width: 253px;
+                      margin-right: 10px;
+                      background: white;
+                      color: #08867d;
+                      margin-left: 130px;
+                      margin-top: 45px;
+                    ">
+                  <div class="menu-txt{{langService['lang']}}" ng-click="regTicket()" style="width: 100% !important">
+                    <p>{{langService['regis'][langService['lang']]}}</p>
+                  </div>
+                </div>
+              </div> -->
+            <!-- <td><button class="key-an" ng-click="upperCasefunc()">^</button></td> -->
+          
+            <div class="sms-btn{{langService['lang']}} ">
+                <div (click)="langService['jumpto']('/landing')"
+                  style="   font-size: 23pt;
+                  font-weight: bold;
+                  background: #08867d;
+                  color: white;
+                  border-radius: 30px;
+                  height: auto;
+                  line-height: 36pt;
+                  width: 100%;border-radius: 30px !important;
+                  text-align: center;">
+                  {{langService['backtxt'][langService['lang']]}}
+                </div>          
+      
+              </div>
+      </div>
+
+    </div>
+  </div>

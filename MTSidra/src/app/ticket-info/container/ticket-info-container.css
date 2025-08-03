@@ -1,0 +1,141 @@
+:host {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.ticket_info_container {
+  background: transparent;
+}
+
+.app-visit-cancel {
+  position: absolute;
+  width: 100%;
+}
+
+.expand-view-btn,
+.expand-view-ticket {
+  float: none !important;
+  width: 100% !important;
+}
+
+.expand-view-btn {
+  margin: 0 auto 0 auto !important;
+}
+
+.visitcall-heading-one {
+  padding-bottom: 1em;
+  font-family: 'Roboto-Regular';
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--general-text-color);
+}
+
+.visit-call-message {
+  font-size: 16px;
+}
+
+.visitcall-heading-three {
+  font-size: 25px;
+  font-family: Roboto-Bold;
+  word-wrap: break-word;
+  padding-bottom: 40px;
+}
+
+.ticket_branch {
+  position: relative;
+  /* top: 6px; */
+  font-family: Roboto-Light;
+  font-size: 20px;
+  /* padding: 20px 0; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  margin: 1em auto !important;
+}
+
+.ticket-container-center {
+  float: none !important;
+}
+
+.button-container {
+  margin: 1em 0;
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+}
+
+.inner-padding {
+  padding: 18px;
+}
+
+.placement-layout {
+  width: 90%;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+}
+
+
+.loader-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loader-container {
+  margin-top: 3em;
+}
+
+.inline-block-elem {
+  display: inline-block;
+}
+
+.width-control {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.visit-call-background {
+  /* background-color: var(--secondary-color); */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+::-webkit-bar {
+  width: 6px;
+  display: unset;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: none;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: 10px;
+  width: 6px;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.inner-margin-separator {
+  height: auto;
+  margin-bottom: 18px;
+}
+.button-container {
+  position: relative;
+}
+
+@media (max-width: 450px), (max-height: 450px){ 
+  .accent-btn {
+    font-size: 14px !important;
+  }
+}

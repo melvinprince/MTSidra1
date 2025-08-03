@@ -1,0 +1,22 @@
+{
+  "/MobileTicket/*": {
+    "target": "http://192.168.40.13:9090",
+    "secure": false
+  },
+  "/rest/*": {
+    "target": "http://192.168.40.13:9090",
+    "secure": false
+  },
+  "/geo/*": {
+    "target": "http://192.168.40.13:9090",
+    "secure": false
+  },
+  "/MTService/*": {
+    "target": "http://192.168.40.13:81",
+    "secure": false
+  },
+  "/mt/*": {
+    "target": "http://192.168.40.13:5008",
+    "secure": false
+  }
+}

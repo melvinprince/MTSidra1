@@ -1,0 +1,131 @@
+.ticket_container {
+  /* background: url('/app/resources/Ticket.png'); */
+  background: #DEEDF6;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: contain;
+  height: 200px;
+  max-height: 350px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color:white;
+}
+
+@-moz-document url-prefix() {
+  .ticket_container {
+    padding-top: 60px;
+  }
+}
+
+.ticket_nmbr {
+  line-height: 100%;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: Roboto-Bold;
+  color: #185982;
+}
+
+.ticket_info {
+  position: relative;
+  text-align: center;
+  display: table;
+  width: 300px;
+  margin: 0 auto 80px auto;
+  border-radius: 30px;
+}
+
+.service-text-small {
+  font-size: 15px !important;
+}
+
+.service-text-large {
+  font-size: 24px !important;
+  color: #88B0D8;
+}
+
+.ticket_branch {
+  text-align: center;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  font-size: 1.2em !important;
+}
+
+.ticket-size-1 {
+  font-size: 62px !important;
+}
+
+.ticket-size-2 {
+  font-size: 62px !important;
+}
+
+.ticket-size-3 {
+  font-size: 62px !important;
+}
+
+.ticket-size-4 {
+  font-size: 52px !important;
+}
+
+.ticket-size-5 {
+  font-size: 39px !important;
+}
+
+.ticket-size-6 {
+  font-size: 39px !important;
+}
+
+.ticket-service-name {
+  color: #185982;
+  width: 133px !important;
+  line-height: 24px;
+  font-weight: 700 !important;
+  font-family: Roboto-Bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.ticket-remove-heading {
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tckt-line-height {
+  line-height: 25px;
+}
+
+.expand-view {
+  position: absolute;
+
+}
+
+.ticket-text {
+  width: 80%;
+  vertical-align: super;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fadeIn {
+  visibility: visible !important;
+}
+
+.fadeOut {
+  visibility: hidden !important;
+}
+
+.v-center {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.inside-margin {
+  height: 0;
+}

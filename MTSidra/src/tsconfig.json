@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": "",
+    "declaration": false,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2017", "dom"],
+    "mapRoot": "./",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "outDir": "../aot",
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+    "skipLibCheck": true
+  },
+  "angularCompilerOptions": {
+    "enableIvy" : false,
+    }
+,
+  "files": [
+    "main.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts",
+    "polyfills.ts"
+  ]
+  
+}

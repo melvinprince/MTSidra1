@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es6","DOM"],
+    "allowJs": true,
+    "outDir": "",
+    "rootDir": "",
+    "resolveJsonModule": true
+  },
+  "exclude": ["upgrade-helper","bin","sslcert"]
+}

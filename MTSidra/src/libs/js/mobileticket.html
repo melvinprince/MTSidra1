@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>MobileTicketAPI Unit Tests</title>
+	<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.1.1.css">
+</head>
+
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+	<script src="https://code.jquery.com/qunit/qunit-2.1.1.js"></script>
+	<script src="mobileticket-1.0.1.js"></script>
+	<script type="text/javascript">
+       MobileTicketAPI.init(); 
+	   MobileTicketAPI.setServiceSelection({"id":"2"});			  
+	   MobileTicketAPI.getBranchesNearBy(6.34455,34.55666,1,
+		  function(data){
+			   QUnit.test( "getBranchesNearBy", function( assert ) {
+						 assert.equal(Array.isArray(data), true);
+						  }); 
+						},
+						function(xhr, status, errorMsg){
+							console.log(errorMsg);
+			   QUnit.test( "getBranchesNearBy", function( assert ) {
+						  assert.equal(1,0);
+						   }); 
+						}
+		); 
+       //------------------------------------------------------------------------------------------- 
+	   MobileTicketAPI.setServiceSelection({"id":"2"});	
+	   MobileTicketAPI.getAllBranches(
+						function(data){
+							QUnit.test( "getAllBranches", function( assert ) {
+						      assert.equal(Array.isArray(data), true);
+							}); 
+						},
+						function(xhr, status, errorMsg){
+							QUnit.test( "getAllBranches", function( assert ) {
+						      assert.equal(1,0);
+							}); 
+						}
+	  );			
+      //-------------------------------------------------------------------------------------------  
+	   MobileTicketAPI.setBranchSelection({"id":"1"});	
+	   MobileTicketAPI.getServices(
+						function(data){
+							 QUnit.test( "getServices", function( assert ) {
+						   		 assert.equal(Array.isArray(data), true);
+							 }); 
+						},
+						function(xhr, status, errorMsg){
+							 QUnit.test( "getServices", function( assert ) {
+						         assert.equal(1,0);
+							 }); 
+						}
+	   );			
+      //-------------------------------------------------------------------------------------------- 
+	    MobileTicketAPI.setServiceSelection({"id":"2"});	
+		MobileTicketAPI.setBranchSelection({"id":"1"});
+	    MobileTicketAPI.createVisit(
+						function(data){
+							 QUnit.test( "createVisit", function( assert ) {
+						    		assert.equal(typeof(data), "object");
+							 });
+						}
+		);			
+       //--------------------------------------------------------------------------------------------- 
+	  MobileTicketAPI.createVisit(
+						function(data){
+						    MobileTicketAPI.getVisitStatus(
+								function(data){
+									 QUnit.test( "getVisitStatus", function( assert ) {
+								    		assert.equal(typeof(data), "object");
+									 }); 
+								},
+								function(xhr, status, errorMsg){
+									QUnit.test( "getVisitStatus", function( assert ) {
+								            assert.equal(1,0);
+									}); 
+								}
+							);		
+						}
+					);			    
+      //---------------------------------------------------------------------------------------------------
+	  MobileTicketAPI.setServiceSelection({"id":"2"});	
+			  		MobileTicketAPI.setBranchSelection({"id":"1"});
+					MobileTicketAPI.createVisit(
+						function(data){
+						    MobileTicketAPI.cancelVisit(
+								function(){
+									  QUnit.test( "cancelVisit", function( assert ) {
+								   			assert.equal(1,1);
+									  }); 
+								},
+								function(xhr, status, errorMsg){
+									QUnit.test( "cancelVisit", function( assert ) {
+								   	       assert.equal(1,0);
+									}); 
+								}
+							);		
+						}
+					);		
+      //-----------------------------------------------------------------------------------------------------
+	QUnit.test( "setBranchSelection", function( assert ) {
+		var branch = {"id":"1"};
+		MobileTicketAPI.setBranchSelection(branch);
+		var selectedBranch = MobileTicketAPI.getSelectedBranch();
+		assert.equal(selectedBranch.id, branch.id)
+	}); 
+	//-------------------------------------------------------------------------------------------------------
+	QUnit.test( "setServiceSelection", function( assert ) {
+		var service = {"id":"1"};
+		MobileTicketAPI.setServiceSelection(service);
+		var selectedService = MobileTicketAPI.getSelectedService();
+		assert.equal(selectedService.id, service.id)
+	}); 
+  </script>
+</body>
+
+</html>

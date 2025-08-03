@@ -1,0 +1,482 @@
+{
+  "branch_radius": {
+    "value": "1500",
+    "description": "Radius to include branches within (in meters)"
+  },
+  "appointment_arrive_radius": {
+    "value": "2147483647",
+    "description": "Radius to arrive appointment within (in meters)"
+  },
+  "geo_fencing": {
+    "value": "enable",
+    "description": "Enable or disable geofencing on landing pages, 'on = enable',  'off = disable', 'mandatory = geo fencing is enabled and allow location service is mandatory' . geofencing will only work on https protocol. if geofencing disabled, branch radius and appointment radius will be discarded"
+  },
+  "version": {
+    "value": "2.5.2",
+    "description": "MobileTicket version [depreciated key. version in package.json and release notes instead]"
+  },
+  "customer_feedback": {
+    "value": "",
+    "description": "URL to redirect when a visit is ended, starting with http:// or https://."
+  },
+  "ga_track_id": {
+    "value": "",
+    "description": "Google Analytic Track-ID"
+  },
+  "cookie_consent": {
+    "value": "disable",
+    "description": "Enable or disable cookie consent popup in the first landing page, 'on = enable', 'off = disable'"
+  },
+  "notification_sound": {
+    "value": "YourTurn.wav",
+    "description": "Sound file use for notification"
+  },
+  "service_fetch_interval": {
+    "value": "15",
+    "description": "The interval (in seconds) at which service information is refreshed periodically, this setting is only used if the setting Show number of waiting customers are enabled"
+  },
+  "service_screen_timeout": {
+    "value": "10",
+    "description": "The time duration (in minutes) which the app will stay in services screen without creating a ticket"
+  },
+  "branch_schedule": {
+    "value": "disable",
+    "description": "Enable or disable branch schedule. When enabled, ignore the branch_open_hours values."
+  },
+  "branch_open_hours": {
+    "value": [
+      {
+        "translation_key": "open_hours.week_day1",
+        "from": "8:00",
+        "to": "18:00",
+        "description": "monday",
+        "display_from": "8:00",
+        "display_to": "18:00",
+        "show": "true"
+      },
+      {
+        "translation_key": "open_hours.week_day2",
+        "from": "8:00",
+        "to": "18:00",
+        "description": "tuesday",
+        "display_from": "8:00",
+        "display_to": "18:00",
+        "show": "true"
+      },
+      {
+        "translation_key": "open_hours.week_day3",
+        "from": "8:00",
+        "to": "18:00",
+        "description": "wednesday",
+        "display_from": "8:00",
+        "display_to": "18:00",
+        "show": "true"
+      },
+      {
+        "translation_key": "open_hours.week_day4",
+        "from": "8:00",
+        "to": "18:00",
+        "description": "thursday",
+        "display_from": "8:00",
+        "display_to": "18:00",
+        "show": "true"
+      },
+      {
+        "translation_key": "open_hours.week_day5",
+        "from": "8:00",
+        "to": "23:00",
+        "description": "friday",
+        "display_from": "8:00",
+        "display_to": "18:00",
+        "show": "true"
+      },
+      {
+        "translation_key": "open_hours.week_day6",
+        "from": "8:00",
+        "to": "18:00",
+        "description": "saturday",
+        "display_from": "8:00",
+        "display_to": "18:00",
+        "show": "true"
+      },
+      {
+        "translation_key": "open_hours.week_day7",
+        "from": "8:00",
+        "to": "18:00",
+        "description": "sunday",
+        "display_from": "8:00",
+        "display_to": "18:00",
+        "show": "true"
+      }
+    ],
+    "description": "Open hours of all branches in general"
+  },
+  "create_new_ticket": {
+    "value": "enable",
+    "description": "Enable or disable access to create visits using the Mobile Ticket UI, 'on=enable', 'off=disable'"
+  },
+  "show_queue_position": {
+    "value": "enable",
+    "description": "show or hide queue and queue position in the ticket"
+  },
+  "show_appointment_time": {
+    "value": "disable",
+    "description": "show or hide appointment time in the appointment ticket. If both show_queue_position and show_appointment_time are enabled, only appointment time will be shown"
+  },
+  "show_number_of_waiting_customers": {
+    "value": "enable",
+    "description": " If this setting is enabled the number of waiting customers will appear in the service list, if disabled only service names are listed."
+  },
+  "appointment_late": {
+    "value": 30,
+    "description": " How long is the customer allowed to arrive for his appointment (in minutes)"
+  },
+  "appointment_early": {
+    "value": 180,
+    "description": " How early is the customer allowed to arrive for his appointment (in minutes)"
+  },
+  "timeFormat": {
+    "value": "HH:mm",
+    "description": "Time format for showing the appointment time. Allowed settings are HH:mm, hh:mm, hh:mm a, h:mm, h:mm a"
+  },
+  "dateFormat": {
+    "value": "DD/MM/YYYY",
+    "description": "Date format for showing the appointment date. Allowed placeholders are DD MM YY YYYY"
+  },
+  "system_of_units": {
+    "value": "auto",
+    "description": "System of units which measures the distance to the branch. Can be metric (km or m), imperial (mi), auto (depending on the browser locale)"
+  },
+  "customer_data": {
+    "value": {
+      "phone_number": {
+        "value": "disable",
+        "description": "Enable or disable customer phone number field in customer data section, 'enable => phone number field is visible but not mandatory', 'disable => phone number field is not visible' , 'mandatory => phone number field is visible and mandatory'"
+      },
+      "first_name": {
+        "value": "disable",
+        "description": "Enable or disable customer first name field in customer data section, 'on = enable', 'off = disable', 'mandatory => first name field is visible and mandatory'"
+      },
+      "last_name": {
+        "value": "disable",
+        "description": "Enable or disable customer last name field in customer data section, 'on = enable', 'off = disable', 'mandatory => last name field is visible and mandatory'"
+      },
+      "customerId": {
+        "value": "disable",
+        "description": "Enable or disable customer id field in customer data section, 'on = enable', 'off = disable'"
+      },
+      "additional_data": {
+        "value": "",
+        "description": "Enable or disable additional customer data on creating ticket URL/service group URL/service selection URL/No preselect URL, that is using in query parameter. Maximum of two comma separated values are expected."
+      }
+    },
+    "description": "Enable or disable customer id, first name, last name or phone number in customer area. If nothing enabled, customer data section will be hidden"
+  },
+  "delay_visit": {
+    "value": {
+      "availability": {
+        "value": "disable",
+        "description": "Enable or disable whether customer need to create or update visit with delay"
+      },
+      "time_slot": {
+        "value": [],
+        "description": "Define delay time slots (minutes)"
+      }
+    },
+    "description": "Enable or disable or define a time when customer need to create or update visit with delay"
+  },
+  "service_group": {
+    "value": {
+      "availability": {
+        "value": "disable",
+        "description": "Enable or disable service grouping, 'on = enable', 'off = disable'"
+      },
+      "single_selection": {
+        "value": "enable",
+        "description": "Enable or disable single service grouping selection, 'on = enable', 'off = disable'"
+      }
+    },
+    "description": "Enable or disable or define a single selection when services show as group"
+  },
+  "service_translation": {
+    "value": "disable",
+    "description": "Enable or disable service translation"
+  },
+  "privacy_policy": {
+    "value": "disable",
+    "description": "Enable or disable privacy policy when sending phone number, 'on = enable', 'off = disable'"
+  },
+  "active_consent": {
+    "value": "disable",
+    "description": "Enable or disable whether customer need to actively press button to agree privacy policy"
+  },
+  "privacy_policy_link": {
+    "value": "",
+    "description": "URL of privacy policy information starting with http:// or https://. If value is null privacy policy information will get from the property file."
+  },
+  "country_code": {
+    "value": "",
+    "description": "Define the country code for phone number. If value is null, no country code will be added. Can be either 'ISO alpha-2 format' or 'International phone number format'. Country code will be separated if any nonnumerical code is defined."
+  },
+  "preferred_country_list": {
+    "value": "",
+    "description": "Define the preferred country codes for dropdown in country code inputs. list of comma separated country codes is expected. Should be 'ISO alpha-2 format'."
+  },
+  "queue_poll_retry": {
+    "value": "2",
+    "description": "Define how many times should retry the queue poll request."
+  },
+  "queue_retry_timeout": {
+    "value": "4",
+    "description": "Define timeout for queue poll request retry if communication to Orchestra fails"
+  },
+  "block_other_browsers": {
+    "value": "disable",
+    "description": "Enable or disable whether user allow to use/open the ticket in other devices apart from the created device. 'on = enable', 'off = disable'"
+  },
+  "otp_service": {
+    "value": "disable",
+    "description": "Enable or disable OTP service"
+  },
+  "create_ticket_token": {
+    "value": "disable",
+    "description": "Enable or disable unique token for a ticket"
+  },
+  "footer": {
+    "value": {
+      "logo": {
+        "value": "disable",
+        "description": "show or hide the brand logo on the footer, enable = show, disable = hide"
+      },
+      "custom_text": {
+        "value": "",
+        "description": "show customize text on the footer, an empty value will hide the footer"
+      }
+    },
+    "description": "Show or hide footer of the mobile ticket"
+  },
+  "branchConf": {
+    "value": [
+      {
+        "branch": 1,
+        "location": [
+          "SideA",
+          "SideB"
+        ],
+        "defaultApptServiceSideA": 1,
+        "defaultQueueSideA": 1,
+        "defaultApptServiceSideB": 2,
+        "defaultQueueSideB": 2,
+        "walkinSideA": [
+          1,
+          2
+        ],
+        "walkinSideB": [
+          1,
+          2
+        ],
+        "apptTypeSideA": [],
+        "apptTypeSideB": [],
+        "queueSideA": {
+          "viplevel1": 1,
+          "viplevel2": 2,
+          "viplevel3": 2,
+          "viplevel4": 2
+        },
+        "queueSideB": {
+          "viplevel1": 1,
+          "viplevel2": 2,
+          "viplevel3": 2,
+          "viplevel4": 2
+        }
+      }
+    ],
+    "description": "configure the services for the branch"
+  },
+  "backtxt": {
+    "value": {
+      "ar": "العودة",
+      "en": "Back"
+    }
+  },
+  "regis": {
+    "value": {
+      "ar": "التسجیل",
+      "en": "Registration"
+    }
+  },
+  "proceedButton": {
+    "value": {
+      "ar": "متابعة",
+      "en": "Proceed"
+    }
+  },
+  "pageMobileEntryLine1": {
+    "value": {
+      "ar": "يرجى إدخال البطاقة الشخصية أو رقم الهاتف",
+      "en": "Please Enter  QID or Phone Number"
+    }
+  },
+  "enterpassportNum": {
+    "value": {
+      "ar": "يرجى إدخال رقم جواز السفر",
+      "en": "Please Enter Passport Number"
+    }
+  },
+  "yourTicketNumber": {
+    "value": {
+      "ar": "رقمك في قائمة الانتظار",
+      "en": "Your Ticket number is"
+    }
+  },
+  "confirmMobileNumber": {
+    "value": {
+      "ar": "يرجى تأكيد رقم الهاتف المحمول لاستلام الرسائل النصية",
+      "en": "Please Confirm Mobile Number to Receive SMS"
+    }
+  },
+  "waitInWaitingArea": {
+    "value": {
+      "ar": "يرجى الجلوس في منطقة الانتظار",
+      "en": "Please wait in the waiting area"
+    }
+  },
+  "nongccticketmsg": {
+    "value": {
+      "ar": "لن يتم إرسال رسائل نصية إلى الدول غير الخليجية، يرجى ملاحظة رقم تذكرتك.",
+      "en": "NO SMS will be sent to NON-GCC Countries , kindly make a note of  your ticket number"
+    }
+  },
+  "closebtntxt": {
+    "value": {
+      "ar": "إغلاق",
+      "en": "Close"
+    }
+  },
+  "withoutTicket": {
+    "value": {
+      "ar": "استلام رسالة نصیة",
+      "en": "Get SMS"
+    }
+  },
+  "checkAppt": {
+    "value": {
+      "ar": "استعلم عن الموعد",
+      "en": "Check Appointment"
+    }
+  },
+  "langTxt": {
+    "value": {
+      "ar": "English",
+      "en": "عربي"
+    }
+  },
+  "AppTime": {
+    "value": {
+      "ar": "الوقت",
+      "en": "Time"
+    }
+  },
+  "doctorsname": {
+    "value": {
+      "ar": "اسم الطبیب",
+      "en": "Doctor’s Name"
+    }
+  },
+  "AppDate": {
+    "value": {
+      "ar": "التاريخ",
+      "en": "Date"
+    }
+  },
+  "novalidAppointment": {
+    "value": {
+      "ar": "لا يوجد موعد مسجل للمريض لهذا اليوم",
+      "en": "No Valid Appointment for today"
+    }
+  },
+  "pleasetake": {
+    "value": {
+      "ar": "يرجى أخذ رقم للتسجیل",
+      "en": "Please take a token for registration"
+    }
+  },
+  "invalidMsg": {
+    "value": {
+      "ar": "رقم الهاتف المحمول / بطاقة الهوية القطرية / جواز السفر غير صالح.",
+      "en": "Mobile/QID/Passport is Invalid"
+    }
+  },
+  "selectAnOption": {
+    "value": {
+      "ar": "يرجى اختيار الخدمة المطلوبة",
+      "en": "Please Select the Service"
+    }
+  },
+  "gccOption": {
+    "value": {
+      "ar": "مجلس التعاون الخليجي",
+      "en": "GCC"
+    }
+  },
+  "nonGCCOption": {
+    "value": {
+      "ar": "غير دول مجلس التعاون الخليجي",
+      "en": "NON-GCC"
+    }
+  },
+  "patientName": {
+    "value": {
+      "ar": "اسم المريض",
+      "en": "Patient Name"
+    }
+  },
+  "page0": {
+    "value": {
+      "cardmsg": {
+        "en": "",
+        "ar": ""
+      },
+      "menumsg": {
+        "en": "Please Enter the Staff ID",
+        "ar": "اختر الوزارة"
+      },
+      "ormsg": {
+        "en": "Or",
+        "ar": "أو"
+      }
+    }
+  },
+  "pageServMsg": {
+    "value": {
+      "cardmsg": {
+        "en": "",
+        "ar": ""
+      },
+      "menumsg": {
+        "en": "Appointment Information",
+        "ar": "معلومات الموعد"
+      },
+      "ormsg": {
+        "en": "Or",
+        "ar": "أو"
+      }
+    }
+  },
+  "page1": {
+    "value": {
+      "cardmsg": {
+        "en": "",
+        "ar": ""
+      },
+      "menumsg": {
+        "en": "Appointment Information",
+        "ar": "معلومات الموعد"
+      },
+      "ormsg": {
+        "en": "Or",
+        "ar": "أو"
+      }
+    }
+  }
+}

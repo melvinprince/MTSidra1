@@ -1,0 +1,93 @@
+.sub-heading-margin-bottom {
+  margin-bottom: 1.5em;
+}
+
+.queue-container {
+  /*
+  * Definition - 40px each box, times 9 for nine other boxes, plus 50px for selected box, padding left and right for each of the 10 boxes and 1px precision.
+  */
+  max-width: calc((9 * 40px) + 50px + (2px * 10) + 1px);
+  width: calc((9 * 8.5vw) + 12vw + (2px * 10) + 1px);
+  margin: 0 auto;
+  display: table;
+  margin-top: 45px;
+}
+
+.queue-heading {
+  color: white;
+  font-size: 20px;
+  color: #FFFFFF;
+  font-family: Roboto-Light;
+  padding-bottom: 4px;
+}
+
+
+.queue-heading-alignment{
+  text-align: center;
+}
+
+.queue-end {
+  font-size: 1.2em;
+  margin-top: 2em !important;
+}
+
+.queue-body {
+  padding-top: 5vw;
+  display: table-row;
+  text-align: right;
+}
+
+.app-queue-item{
+  font-size: 0em;
+  font-family: Roboto-Regular;
+}
+
+.recycle-heading {
+  font-size: 19px;
+  color: #FFFFFF;
+  font-family: Roboto-Light !important;
+  font-style: oblique !important;
+  font-weight: 300;
+}
+
+.app-time {
+  /* margin-top: 30px! important; */
+}
+.queue-app {
+  color: #FFFFFF;
+  line-height: 34px;
+  display: grid;
+  /* margin: 4px 0 10px 0px; */
+  font-family: 'Roboto-Regular';
+}
+.queue-app-heading {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 6px;
+  margin-top: 2px;
+}
+.queue-app-time {
+  padding: 5px 0;
+  font-size: 32px;
+  /* font-weight: 700 !important; */
+}
+
+/* Small phones */
+@media (max-width: 400px){
+
+  .queue-heading {
+    color: white;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-family: Roboto-Light;
+    padding-bottom: 4px;
+  }
+
+  .queue-container {
+    max-width: calc((9 * 35px) + 45px + (2px * 10) + 1px);
+    width: calc((9 * 8.5vw) + 12vw + (2px * 10) + 1px);
+    margin: 0 auto;
+    display: table;
+    min-width: 65%;
+  }
+}

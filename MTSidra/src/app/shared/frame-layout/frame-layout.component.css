@@ -1,0 +1,136 @@
+@font-face {font-family: "Roboto-Light";
+  src: url("/app/resources/Roboto-Light.ttf");
+}
+
+@font-face {font-family: "Roboto-Bold";
+  src: url("/app/resources/Roboto-Bold.ttf");
+}
+
+@font-face {font-family: "Roboto-Regular";
+  src: url("/app/resources/Roboto-Regular.ttf");
+}
+
+@font-face {font-family: "Roboto-Medium";
+  src: url("/app/resources/Roboto-Medium.ttf");
+}
+
+#app-bg{
+  background: var(--app-bg-primary-color);
+  /* content: var(--app-bg-image); */
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.not-support-view{
+  height: 100%;
+}
+
+.caption {
+  text-align: center;
+  font-size: 2em;
+  color: #FFFFFF;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.logo-container{
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.bg {
+  background: transparent !important;
+}
+
+.center-content {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  overflow: auto;
+  align-items: center;
+}
+.full-with{
+  width: 100%;
+
+}
+
+.logo{
+  /* width: 120px; */
+  max-height: 100px;
+  max-width: 120px;
+  /* margin: 40px auto 0 auto; */
+  z-index: 100;
+  position: relative;
+  /* content: url('/app/resources/qmLogo.png'); */
+}
+
+.frame {
+  height: 5em;
+  text-align: center;
+  max-height: 10em;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.qm-footer{
+  background: white;
+  text-align: center;
+  color: black;
+  bottom: 0;
+  min-height: 30px;
+  position: fixed;
+  width: 100%;
+  font-size: 14px;
+  word-spacing: 3px;
+  margin: 2px 1px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.qm-brand-logo {
+  width: 67px;
+  vertical-align: text-bottom;
+  margin: 0 5px 0 5px;
+  padding: 0 3px;
+}
+.footer-custom-text {
+  padding: 4px;
+  color: white;
+}
+.custom-text {
+  margin: 0 3px;
+  font-weight: 600;
+ 
+}
+.footer-text-color {
+  color: var(--footer-text-color);
+}
+
+/* Media Queries */
+/* Small phones */
+@media (max-width: 450px), (max-height: 450px){
+  .logo{
+    width: 110px;
+  }
+
+  .frame {
+    height: 4em;
+    text-align: center;
+    max-height: 10em;
+  }
+}

@@ -1,0 +1,288 @@
+<div class="serviceMenu" >
+    <img src="../../assets/img/{{passportInput?&apos;qid.png&apos;:&apos;passport_.png&apos;}}" alt="Language Icon" style="width: 18%;
+      position: fixed;
+      top: 5%;z-index:999;
+      right: 1%;" (click)="switchInputType();" />
+    <div class="mainCont">
+      <div class="hdImg">
+        <img src="../../assets/img/intro.png" alt="Language Icon" style="width: 25%" />
+      </div>
+      <div class="hdImg">
+        <h2 style="color: #08867d; font-size:1.5em;min-height: 3em;">{{passportInput?langService['enterpassportNum'][langService['lang']]:langService['pageMobileEntryLine1'][langService['lang']]}}
+        </h2>
+
+      </div>
+
+
+      <!-- <td><button class="key-an" (click)="upperCasefunc()">^</button></td> -->
+
+      <div class="numRow">
+        <input [(ngModel)]="MoborQID" maxlength="15" type="{{passportInput?'text':'number'}}" id="MoborQID" required="required" style="text-align: center;
+                  font-size: 23pt;
+                  font-weight: bold;
+                  background: #08867d;
+                  color: white;
+                  border-radius: 30px;
+                  height: 100%;
+                  width: 90%;
+                  margin-bottom: 10px;" />
+
+      </div>
+      <div class="keypadDiv" *ngIf="false">
+
+        <div class="numRow" *ngIf="!showAlphabet" style="position: relative; font-size: 16pt; ">
+          <div class="keyNum{{langService['lang']}}" (click)="addCharStaff(&apos;mobile&apos;,&apos;1&apos;) ">
+            1
+          </div>
+          <div class="keyNum{{langService['lang']}}" (click)="addCharStaff(&apos;mobile&apos;,&apos;2&apos;) ">
+            2
+          </div>
+          <div class="keyNum{{langService['lang']}}" (click)="addCharStaff(&apos;mobile&apos;,&apos;3&apos;) ">
+            3
+          </div>
+        </div>
+        <div class="numRow" *ngIf="!showAlphabet" style="position: relative; font-size: 16pt; ">
+          <div class="keyNum{{langService['lang']}}" (click)="addCharStaff(&apos;mobile&apos;,&apos;4&apos;) ">
+            4
+          </div>
+          <div class="keyNum{{langService['lang']}}" (click)="addCharStaff(&apos;mobile&apos;,&apos;5&apos;) ">
+            5
+          </div>
+          <div class="keyNum{{langService['lang']}}" (click)="addCharStaff(&apos;mobile&apos;,&apos;6&apos;) ">
+            6
+          </div>
+        </div>
+        <div class="numRow" *ngIf="!showAlphabet" style="position: relative; font-size: 16pt; ">
+          <div class="keyNum{{langService['lang']}}" (click)="addCharStaff(&apos;mobile&apos;,&apos;7&apos;) ">
+            7
+          </div>
+          <div class="keyNum{{langService['lang']}}" (click)="addCharStaff(&apos;mobile&apos;,&apos;8&apos;) ">
+            8
+          </div>
+          <div class="keyNum{{langService['lang']}}" (click)="addCharStaff(&apos;mobile&apos;,&apos;9&apos;) ">
+            9
+          </div>
+        </div>
+        <div class="numRow" *ngIf="!showAlphabet" style="position: relative; font-size: 16pt; ">
+          <div class="keyNumen backSpace{{langService['lang']}}" (click)="deleteChar(&apos;mobile&apos;)">
+            ⌫
+          </div>
+          <div class="keyNum{{langService['lang']}}" (click)="addCharStaff(&apos;mobile&apos;,&apos;0&apos;) ">
+            0
+          </div>
+          <div class="keyNumen" (click)="clearChar(&apos;mobile&apos;); ">
+            X
+          </div>
+        </div>
+
+        <div class="keyRow" *ngIf="showAlphabet" style="position: relative; font-size: 16pt; ">
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;1&apos;) ">
+            1
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;, &apos;2&apos;);">
+            2
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;3&apos;);">
+            3
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;4&apos;);">
+            4
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;5&apos;);">
+            5
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;6&apos;);">
+            6
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;7&apos;);">
+            7
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;8&apos;);">
+            8
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;9&apos;);">
+            9
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;0&apos;);">
+            0
+          </div>
+
+        </div>
+
+        <div class="keyRow" *ngIf="showAlphabet" style="position: relative; font-size: 16pt; ">
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;W&apos;) ">
+            {{upperCase?&apos;Q&apos;:&apos;q&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;, &apos;W&apos;);">
+            {{upperCase ? &apos;W&apos; : &apos;w&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;E&apos;);">
+            {{upperCase?&apos;E&apos;:&apos;e&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;R&apos;);">
+            {{upperCase?&apos;R&apos;:&apos;r&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;T&apos;);">
+            {{upperCase?&apos;T&apos;:&apos;t&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;Y&apos;);">
+            {{upperCase?&apos;Y&apos;:&apos;y&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;U&apos;);">
+            {{upperCase?&apos;U&apos;:&apos;u&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;I&apos;);">
+            {{upperCase?&apos;I&apos;:&apos;i&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;O&apos;);">
+            {{upperCase?&apos;O&apos;:&apos;o&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;P&apos;);">
+            {{upperCase?&apos;P&apos;:&apos;p&apos;}}
+          </div>
+
+        </div>
+
+        <div class="keyRow" *ngIf="showAlphabet" style="position: relative; font-size: 16pt;">
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;A&apos;);">
+            {{upperCase?&apos;A&apos;:&apos;a&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;S&apos;);">
+            {{upperCase?&apos;S&apos;:&apos;s&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;D&apos;);">
+            {{upperCase?&apos;D&apos;:&apos;d&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;F&apos;);">
+            {{upperCase?&apos;F&apos;:&apos;f&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;G&apos;);">
+            {{upperCase?&apos;G&apos;:&apos;g&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;H&apos;);">
+            {{upperCase?&apos;H&apos;:&apos;h&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;J&apos;);">
+            {{upperCase?&apos;J&apos;:&apos;j&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;K&apos;);">
+            {{upperCase?&apos;K&apos;:&apos;k&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;L&apos;);">
+            {{upperCase?&apos;L&apos;:&apos;l&apos;}}
+          </div>
+
+        </div>
+        <div class="keyRow" *ngIf="showAlphabet" style="position: relative; font-size: 16pt;">
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;Z&apos;);">
+            {{upperCase?&apos;Z&apos;:&apos;z&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;X&apos;);">
+            {{upperCase?&apos;X&apos;:&apos;x&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;C&apos;);">
+            {{upperCase?&apos;C&apos;:&apos;c&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;V&apos;);">
+            {{upperCase?&apos;V&apos;:&apos;v&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;B&apos;);">
+            {{upperCase?&apos;B&apos;:&apos;b&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;N&apos;);">
+            {{upperCase?&apos;N&apos;:&apos;n&apos;}}
+          </div>
+
+          <div class="keyAlpha" (click)="addCharStaff(&apos;mobile&apos;,&apos;M&apos;);">
+            {{upperCase?&apos;M&apos;:&apos;m&apos;}}
+          </div>
+
+          <div class="keyAlpha delete" (click)="clearChar();">
+            Cl
+          </div>
+
+          <div class="keyAlpha backspace" (click)="deleteChar()">
+            ⌫
+          </div>
+
+
+        </div>
+        <!-- <tr>
+                    <td
+                      align="center"
+                      colspan="3"
+                      style="padding-left: {{showAlphabet?'25px':'auto'}};"
+                    >
+                      <a
+                        class="keypad-btn"
+                        (click)="showAlphabet = !showAlphabet"
+                      >
+                        {{!showAlphabet? &apos;AA&apos; :&apos;123&apos;}}
+                      </a>
+                    </td>
+                  </tr> -->
+      </div>
+      <br>
+      <div class="fpProceed">
+
+        <div class="sms-btn{{langService['lang']}} ">
+          <div (click)="getCheckAppointment()"
+            style="   font-size: 23pt;
+            font-weight: bold;
+            background: #08867d;
+            color: white;
+            border-radius: 30px;
+            height: auto;
+            line-height: 36pt;
+            width: 100%;border-radius: 30px !important;
+            text-align: center;">
+            {{langService['checkAppt'][langService['lang']]}}
+          </div>
+
+          
+
+        </div>
+<div
+            style="color: #08867d; font-size: {{langService['lang']==&apos;en&apos; ?&apos;20&apos;:&apos;36&apos;}}px; position: relative; top: {{langService['lang']==&apos;en&apos; ?&apos;0&apos;:&apos;10&apos;}}px;"
+            *ngIf="invalidID">
+            {{langService['invalidMsg'][langService['lang']]}}
+          </div>
+      </div>
+
+    </div>
+  </div>

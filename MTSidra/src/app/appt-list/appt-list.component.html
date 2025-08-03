@@ -1,0 +1,148 @@
+<div class="serviceMenu"  >
+    <div class="mainCont">
+      <div class="hdImg">
+        <img src="../../assets/img/page2.png" alt="Language Icon" style="width: 25%" />
+      </div>
+      <div class="hdImg">
+        <h2 style="color: #08867d; font-size:1.5em;">{{langService['page1']['menumsg'][langService['lang']]}}
+        </h2>
+
+      </div> 
+      <br>
+      <div class="fpProceed">
+
+        <div *ngFor="let appointment of AppointmentsList" id="appointment-card-main" class="appointment-card"
+          style="padding: 24px;" (click)="selectRadio(appointment)">
+          <div class="apptLine">
+            <div class="apptTxten"
+              style="color:{{getLateEarly(appointment)==&apos;Early Appointment&apos;?&apos;#b7a99a&apos;:getLateEarly(appointment)==&apos;Late Appointment&apos;?&apos;#e40505&apos;:&apos;#77d64b&apos;}} !important;">
+              {{getLateEarly(appointment)}} </div>
+              </div>
+          <div class="apptLine">
+            <h4 class="apptTxt{{langService['lang']}}">{{langService['patientName'][langService['lang']]}}</h4>
+            <div class="radio{{langService['lang']}}">
+              <input type="radio" name="appointment" (click)="selectRadio(appointment)"
+                [checked]="appointment === this.langService['selectedAppointment'] || AppointmentsList.length==1" />
+            </div>
+          </div>
+
+          <div class="apptLine" *ngIf="langService['lang']==&apos;en&apos;">
+            <div class="apptTxten" >{{appointment['FIRST_NAME']}} {{appointment['LAST_NAME']}}
+            </div>
+            </div>
+          <div class="apptLine" *ngIf="langService['lang']==&apos;ar&apos;">
+            <div class="apptTxten" >{{'1970-01-01T'+appointment['APPT_TIME'] | date:&apos;HH:mm&apos;}} :
+              <span class="apptTxt{{langService['lang']}}">{{langService['AppTime'][langService['lang']]}}</span>
+            </div>
+            </div>
+          <div class="apptLine" *ngIf="langService['lang']==&apos;en&apos;">
+
+            <div class="apptTxten" >{{langService['AppTime'][langService['lang']]}} : {{'1970-01-01T'+appointment['APPT_TIME'] |
+              date:&apos;HH:mm&apos;}}</div>
+              </div>
+          <div class="apptLine" *ngIf="langService['lang']==&apos;ar&apos;">
+
+            <div class="apptTxten" >{{appointment['FIRST_NAME']}} {{appointment['LAST_NAME']}}
+            </div>
+          </div>
+          <hr
+            style="width:100%; border-color: {{getLateEarly(appointment)==&apos;Early Appointment&apos;?&apos;#b7a99a&apos;:getLateEarly(appointment)==&apos;Late Appointment&apos;?&apos;#e40505&apos;:&apos;#77d64b&apos;}};" />
+          <div class="apptLine"  *ngIf="langService['lang']==&apos;en&apos;">
+            <div class="apptTxten">
+              {{dispDoc(appointment['PRACTITIONER_NAME'])?langService['doctorsname'][langService['lang']]+&quot; :&quot;:&quot;&quot;}}
+              {{dispDoc(appointment['PRACTITIONER_NAME'])?appointment['PRACTITIONER_NAME']:appointment['APPT_TYPE']}}</div>
+              </div>
+              <div class="apptLine"  *ngIf="langService['lang']==&apos;en&apos;">
+            <div class="apptTxten">{{langService['AppDate'][langService['lang']]}}: {{appointment['APPT_DATE'] |
+              date:&apos;dd/MM/yyyy &apos;}}</div>
+              </div>
+              <div class="apptLine" *ngIf="langService['lang']==&apos;ar&apos;">
+            <div class="apptTxten" > {{appointment['APPT_DATE'] | date:&apos;dd/MM/yyyy
+              &apos;}} : <span class="apptTxt{{langService['lang']}}">{{langService['AppDate'][langService['lang']]}}</span></div>
+              </div>
+              <div class="apptLine" *ngIf="langService['lang']==&apos;ar&apos;">
+            <div class="apptTxten" >
+              {{dispDoc(appointment['PRACTITIONER_NAME'])?appointment['PRACTITIONER_NAME']:appointment['APPT_TYPE']}}
+              {{dispDoc(appointment['PRACTITIONER_NAME'])?&quot; : &quot;+langService['doctorsname'][langService['lang']]:&quot;&quot;}} </div>
+
+          </div>
+
+        </div>
+
+        <!-- <div *ngFor="let appointment of AppointmentsList" id="appointment-card-main" class="appointment-card"
+        style="padding: 24px;" ng-click="selectRadio(appointment)">
+        <div class="apptLine">
+          <h4 class="apptTxt{{langService['lang']}}">{{langService['patientName'][langService['lang']]}}</h4>
+          <div class="radio{{langService['lang']}}">
+            <input type="radio" name="appointment" ng-click="selectRadio(appointment)"
+              ng-checked="appointment === selectedAppointment || appointmentInfoRes.length==1" />
+          </div>
+        </div>
+
+        <div class="apptLine">
+          <div class="apptTxten" *ngIf="langService['lang']==&apos;en&apos;">{{appointment['FIRST_NAME']}} {{appointment['LAST_NAME']}}
+          </div>
+          <div class="apptTxten" *ngIf="langService['lang']==&apos;ar&apos;">{{'1970-01-01T'+appointment['APPT_TIME'] | date:&apos;HH mm&apos;}} :
+            <span class="apptTxt{{langService['lang']}}">{{langService['AppTime'][langService['lang']]}}</span>
+          </div>
+          <div class="apptTxten"
+            style="color:{{getLateEarly(appointment)==&apos;Early Appointment&apos;?&apos;#b7a99a&apos;:getLateEarly(appointment)==&apos;Late Appointment&apos;?&apos;#e40505&apos;:&apos;#77d64b&apos;}} !important;">
+            {{getLateEarly(appointment)}} </div>
+          <div class="apptTxten" *ngIf="langService['lang']==&apos;en&apos;">{{langService['AppTime'][langService['lang']]}} : {{'1970-01-01T'+appointment['APPT_TIME'] |
+            date:&apos;HH mm&apos;}}</div>
+          <div class="apptTxten" *ngIf="langService['lang']==&apos;ar&apos;">{{appointment['FIRST_NAME']}} {{appointment['LAST_NAME']}}
+          </div>
+        </div>
+        <hr
+          style="width:100%; border-color: {{getLateEarly(appointment)==&apos;Early Appointment&apos;?&apos;#b7a99a&apos;:getLateEarly(appointment)==&apos;Late Appointment&apos;?&apos;#e40505&apos;:&apos;#77d64b&apos;}};" />
+        <div class="apptLine">
+          <div class="apptTxten" *ngIf="langService['lang']==&apos;en&apos;">
+            {{dispDoc(appointment['PRACTITIONER_NAME'])?langService['doctorsname'][langService['lang']]+&quot; :&quot;:&quot;&quot;}}
+            {{dispDoc(appointment['PRACTITIONER_NAME'])?appointment['PRACTITIONER_NAME']:appointment['APPT_TYPE']}}</div>
+          <div class="apptTxten" *ngIf="langService['lang']==&apos;en&apos;">{{langService['AppDate'][langService['lang']]}}: {{appointment['APPT_DATE'] |
+            date:&apos;dd/MM/yyyy &apos;}}</div>
+          <div class="apptTxten" *ngIf="langService['lang']==&apos;ar&apos;"> {{appointment['APPT_DATE'] | date:&apos;dd/MM/yyyy
+            &apos;}} : <span class="apptTxt{{langService['lang']}}">{{langService['AppDate'][langService['lang']]}}</span></div>
+          <div class="apptTxten" *ngIf="langService['lang']==&apos;ar&apos;">
+            {{dispDoc(appointment['PRACTITIONER_NAME'])?appointment['PRACTITIONER_NAME']:appointment['APPT_TYPE']}}
+            {{dispDoc(appointment['PRACTITIONER_NAME'])?&quot; : &quot;+langService['doctorsname'][langService['lang']]:&quot;&quot;}} </div>
+
+        </div>
+
+      </div> -->
+      
+
+
+        <div class="sms-btn{{langService['lang']}} " (click)="langService['prepareValues'](); langService['jumpto']('/mobileentry')">
+          <div 
+            style="   font-size: 23pt;
+            font-weight: bold;
+            background: #08867d;
+            color: white;
+            border-radius: 30px;
+            height: auto;
+            line-height: 36pt;
+            width: 100%;border-radius: 30px !important;
+            text-align: center;">
+            {{langService['proceedButton'][langService['lang']]}}
+          </div>
+          </div><div class="sms-btn{{langService['lang']}} ">
+          <div (click)="langService['jumpto']('/landing')"
+            style="   font-size: 23pt;
+            font-weight: bold;
+            background: #08867d;
+            color: white;
+            border-radius: 30px;
+            height: auto;
+            line-height: 36pt;
+            width: 100%;border-radius: 30px !important;
+            text-align: center;">
+            {{langService['backtxt'][langService['lang']]}}
+          </div>          
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>

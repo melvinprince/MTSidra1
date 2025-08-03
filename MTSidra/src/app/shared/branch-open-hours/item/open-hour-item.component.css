@@ -1,0 +1,39 @@
+ .cell_day{
+   display: table-cell;
+   min-width:220px;
+   color:#ffffff;
+ }
+
+ .seperator{
+     display:table-cell;
+     width:16px
+ }
+
+ .cell_hours{
+   display: table-cell;
+   text-align: right;
+   min-width:220px;
+   color:#ffffff;
+ }
+
+ .cell_hours-rtl cell_hours{
+   text-align: left !important;
+   color:#ffffff;
+ }
+
+ /* Media Queries */
+/* Small phones */
+@media (max-width: 450px), (max-height: 450px){
+ .cell_hours{
+   display: table-cell;
+   text-align: right;
+   min-width:100px;
+   color:#ffffff;
+ }
+
+  .cell_day{
+   display: table-cell;
+   min-width:100px;
+   color:#ffffff;
+ }
+}

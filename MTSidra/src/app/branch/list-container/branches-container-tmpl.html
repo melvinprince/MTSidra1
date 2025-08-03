@@ -1,0 +1,32 @@
+<div [hidden]="isLoading || !branchIsOpen" >
+  <!-- <div class="row sub-heading-text-1-margin">
+    <div class="col-xs-1 col-xxs"></div>
+    <div class="col-xs-10 col-xxs">
+      <div class="center-text sub-heading-text-1 custom text-color pad-bottom inner-margin-separator">
+        <div id="branchSubHeadingOne">{{ 'branch.subHeadingOne' | translate }}</div>
+      </div>
+    </div>
+    <div class="col-xs-1 col-xxs"></div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-xs-12 col-xxs">
+      <div class="center-text sub-heading-text-2 custom text-color">
+        <div id="branchSubHeadingTwo">{{ 'branch.subHeadingTwo' | translate }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row" [hidden]="!showNetWorkError">
+      <app-network-message></app-network-message>
+</div>
+<div class="row">
+  <div class="col-xs-0 col-xxs"></div>
+  <div class="col-xs-12 col-xxs list-bottom-margin">
+    <div>
+      <app-branches (isBranchOpen)="isBranchOpen($event)" (startLoading)="startLoading($event)" (onShowHideRequest)="showHideNetworkError($event)"></app-branches>
+    </div>
+  </div>
+  <div class="col-xs-0 col-xxs"></div>
+</div>
+

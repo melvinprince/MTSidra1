@@ -1,0 +1,54 @@
+<div class="serviceMenu" >
+    <img src="../../assets/img/{{passportInput?&apos;qid.png&apos;:&apos;passport_.png&apos;}}" alt="Language Icon" style="width: 18%;
+      position: fixed;
+      top: 5%;z-index:999;
+      right: 1%;" (click)="switchInputType();" />
+    <div class="mainCont">
+      <div class="hdImg">
+        <img src="../../assets/img/intro.png" alt="Language Icon" style="width: 25%" />
+      </div>
+      <div class="hdImg">
+        <h2 style="color: #08867d; font-size:1.5em;min-height: 3em;">{{langService['selectAnOption'][langService['lang']]}}
+        </h2>
+
+      </div>
+
+
+      <!-- <td><button class="key-an" (click)="upperCasefunc()">^</button></td> -->
+
+     
+      <div class="fpProceed">
+
+        <div class="sms-btn{{langService['lang']}} ">
+          <div (click)="gccSelection(true)"
+            style="   font-size: 23pt;
+            font-weight: bold;
+            background: #08867d;
+            color: white;
+            border-radius: 30px;
+            height: auto;
+            line-height: 36pt;
+            width: 100%;border-radius: 30px !important;
+            text-align: center;">
+            {{langService['gccOption'][langService['lang']]}}
+          </div>
+        </div>
+        <div class="sms-btn{{langService['lang']}} ">
+            <div (click)="gccSelection(false)"
+              style="   font-size: 23pt;
+              font-weight: bold;
+              background: #08867d;
+              color: white;
+              border-radius: 30px;
+              height: auto;
+              line-height: 36pt;
+              width: 100%;border-radius: 30px !important;
+              text-align: center;">
+              {{langService['nonGCCOption'][langService['lang']]}}
+            </div>
+          </div>
+
+      </div>
+
+    </div>
+  </div>

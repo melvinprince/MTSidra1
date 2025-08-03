@@ -1,0 +1,152 @@
+.flex-parent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  align-items: center;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: calc(88vw + 8px - 100px) !important;
+  max-width: 256px;
+}
+
+.short-and-fixed {
+  white-space: nowrap;
+  margin: 0 3px;
+  min-width: 40px;
+}
+
+.short-and-fixed > div {
+  width: 40px;
+  height: 30px;
+  border-radius: 10px;
+  background: lightgreen;
+  display: inline-block;
+}
+
+.long-and-truncated-with-child-corrected {
+  min-width: 0;
+}
+
+.long-and-truncated-with-child-corrected span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.service-btn {
+  color: var(--list-button-text);
+  border-radius: 75px;
+  height: calc(14vw + 8px) !important;
+  width: calc(88vw + 8px) !important;
+  max-height: 48px;
+  max-width: 356px;
+font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  background: var(--list-button-background);
+  margin: 0 auto 25px auto;
+}
+
+.service-btn-active {
+  background-color:var(--list-button-background-selected);
+  color: var(--list_button_text_light);
+}
+
+.service-btn:hover { 
+  .short-and-fixed { 
+    // background: #E5EBF1 !important;
+  }
+  .service-btn { 
+    // color: #175A83 !important;
+  }
+}
+
+
+.service_name {
+  display: inline-flex;
+}
+
+.service_name > span {
+  margin: 0 auto;
+  font-family: Roboto-Medium;
+}
+
+.btn-text-container {
+  width: 100%;
+}
+
+div.btn-text {
+  font-size: 17px;
+  font-weight: 400;
+  vertical-align: super;
+}
+
+div.btn-text > span:nth-child(1) {
+  flex: 2;
+}
+
+div.btn-text > span:nth-child(2) {
+  flex: 10;
+}
+
+svg.tick {
+  width: 16px;
+  visibility: hidden;
+  position: relative;
+  top: 2px;
+}
+
+.is-visible {
+  visibility: visible;
+}
+
+.tick-container {
+  position: absolute;
+  right: 18px;
+  top: 28%;
+}
+
+.customer-waiting {
+  /*...*/
+}
+
+.customer-icon {
+  width: 20px;
+  vertical-align: sub;
+  stroke: #303030;
+  padding: 1px;
+}
+
+/* Media Queries */
+@media (min-width: 450px) {
+  div.btn-text {
+    font-size: 17px;
+    font-weight: 400;
+    vertical-align: super;
+  }
+
+  .tick-container {
+    position: absolute;
+    right: 1.5em;
+    top: 34%
+  }
+
+  svg.tick {
+    position: relative;
+    top: 2px;
+    width: 18px;
+    visibility: hidden;
+  }
+}
