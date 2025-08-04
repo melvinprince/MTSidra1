@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FrameLayoutComponent } from 'app/shared/frame-layout/frame-layout.component';
 import { LangService } from 'app/shared/lang.service';
-import { setTimeout } from 'node:timers';
 declare var MobileTicketAPI :any;
 @Component({
   selector: 'app-appt-val',
