@@ -4,7 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "ng serve --host 0.0.0.0 --proxy-config proxy.config.json",
+    "start": "node --openssl-legacy-provider ./node_modules/@angular/cli/bin/ng serve --host 0.0.0.0 --proxy-config proxy.config.json",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
@@ -42,7 +42,7 @@
     "moment-timezone": "^0.5.40",
     "ng2-bootstrap": "^1.1.16",
     "ngx-bootstrap": "^6.2.0",
-    "ngx-intl-tel-input": "^3.1.1",
+    "ngx-intl-tel-input": "^3.0.0",
     "nocache": "^2.1.0",
     "rxjs": "^6.6.6",
     "rxjs-compat": "^6.6.6",

@@ -5,7 +5,10 @@
     "downlevelIteration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "mapRoot": "./",
     "module": "esnext",
     "moduleResolution": "node",
@@ -15,12 +18,14 @@
     "typeRoots": [
       "../node_modules/@types"
     ],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ]
   },
   "angularCompilerOptions": {
-    "enableIvy" : false,
-    }
-,
+    "enableIvy": true
+  },
   "files": [
     "main.ts"
   ],
@@ -28,5 +33,4 @@
     "src/**/*.d.ts",
     "polyfills.ts"
   ]
-  
 }
